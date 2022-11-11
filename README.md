@@ -31,7 +31,7 @@ Now, `textColor` equals ![#C3D0F9](https://placehold.co/15x15/C3D0F9/C3D0F9.png)
 - examples: '#db1f90', '#ffffff', '#123456'
 
 #### `contrastRatio`
-- definition: the minimum contrast ration between your `fixedColor` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
+- definition: the minimum contrast ratio between your `color` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
 - type: number | string
 - default value: 'AA' (equivilent to 3)
 - examples: 3, 'AA', 'AA_text', 'AA_text_large', 'AAA_text', 'AAA_text_large';
@@ -84,6 +84,7 @@ Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png)
 - type: string
 - pattern: `/^#[\da-fA-F]{6}/`
 - examples: '#db1f90', '#ffffff', '#123456'
+
 #### `fixedColor`
 - definition: the color you want to contrast against
 - type: string
@@ -91,7 +92,7 @@ Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png)
 - examples: '#db1f90', '#ffffff', '#123456'
 
 #### `contrastRatio`
-- definition: the minimum contrast ration between your `fixedColor` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
+- definition: the minimum contrast ratio between your `fixedColor` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
 - type: number | string
 - default value: 'AA' (equivilent to 3)
 - examples: 3, 'AA', 'AA_text', 'AA_text_large', 'AAA_text', 'AAA_text_large';

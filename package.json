@@ -30,5 +30,8 @@
   },
   "tap": {
     "no-timeout": true
+  },
+  "dependencies": {
+    "color-contrast-picker": "^1.0.0"
   }
 }
