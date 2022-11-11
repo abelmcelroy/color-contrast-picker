@@ -24,7 +24,7 @@ module.exports = {
     globalObject: "this",
     library: {
       type: "umd",
-      name: "wcagPalette"
+      name: "color-contrast-picker"
     }
   },
 };

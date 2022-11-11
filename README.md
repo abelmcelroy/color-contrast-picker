@@ -1,6 +1,6 @@
-# wcagpalette
+# color-contrast-picker
 
-`wcagpalette` is a color conversion library for JavaScript and node.
+`color-contrast-picker` is a color conversion library for JavaScript and node.
 
 This library provides a method for finding a color with a specific contrast ratio to another color and that matches the hue and saturation of the first.
 
@@ -39,7 +39,7 @@ Now, `textColor` equals ![#C3D0F9](https://placehold.co/15x15/C3D0F9/C3D0F9.png)
 ### Example
 
 ```js
-const { getContrastingHex } = require('wcagpalette');
+const { getContrastingHex } = require('color-contrast-picker');
 
 const hex1 = makeHexesContrast('#7524B7', 4.5);
 const hex2 = makeHexesContrast('#7524B7', 'AA_text');
@@ -99,7 +99,7 @@ Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png)
 ### Example
 
 ```js
-const { makeHexesContrast } = require('wcagpalette');
+const { makeHexesContrast } = require('color-contrast-picker');
 
 const hex1 = makeHexesContrast('#3c7801', '#3c7805', 4.5);
 // hex1 = '#bafe76' (contrast ratio = 4.51)
@@ -118,7 +118,7 @@ const hex3 = makeHexesContrast('#8F428D', 'db1f90', 7);
 # Install
 
 ```console
-$ npm install wcagpalette
+$ npm install color-contrast-picker
 ```
 
 # Contribute

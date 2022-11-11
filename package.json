@@ -1,7 +1,7 @@
 {
-  "name": "contrast-picker",
+  "name": "color-contrast-picker",
   "version": "1.0.0",
-  "description": "Color palette tool for WCAG 2.1 compliant colors. Finds colors meeting the luminance ratio for any WCAG 2.1 standard, while preserving tone.",
+  "description": "Color picking tool for WCAG 2.1 compliant colors. Finds colors meeting the luminance ratio for any WCAG 2.1 standard, while preserving tone.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.js",
   "files": [
@@ -14,7 +14,7 @@
   },
   "author": "abel-mcelroy",
   "license": "MIT",
-  "repository": "abelmcelroy/contrast-picker",
+  "repository": "abelmcelroy/color-contrast-picker",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
