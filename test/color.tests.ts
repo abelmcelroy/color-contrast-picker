@@ -35,7 +35,6 @@ function testUniformSample(stdType: WCAGStandard) {
 
       if (contrastingHexCode2) {
 
-        console.log(hexCode, fixedHex, contrastingHexCode2)
         const lumA = relativeLuminance(fixedHex);
         const lumB = relativeLuminance(contrastingHexCode2);
         const contrast = contrastRatio(lumA, lumB);
@@ -43,7 +42,6 @@ function testUniformSample(stdType: WCAGStandard) {
         t.ok(contrastIsGood, `${fixedHex} & ${contrastingHexCode2} contast should be ${minContrastRatio}, (${Math.floor(contrast*100)/100})`);
       } else {
 
-        console.log(hexCode, fixedHex, contrastingHexCode2)
         const lumA = relativeLuminance(fixedHex);
         const lumBlack = relativeLuminance("#000000");
         const lumWhite = relativeLuminance("#FFFFFF");
@@ -55,6 +53,6 @@ function testUniformSample(stdType: WCAGStandard) {
   })
 }
 
-Object.keys(WCAGcontrastRatios).forEach((WCAGstd: WCAGStandard) => {
-  testUniformSample(WCAGstd);
-});
+for (let WCAGstd in WCAGcontrastRatios) {
+  testUniformSample(WCAGstd as WCAGStandard);
+}

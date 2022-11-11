@@ -1,9 +1,10 @@
 node_modules
 package-lock.json
-dist
+lib
 clear.sh
 .nyc_output
 /src/*.js
 /test/*.js
 .abels_notes.md
 report.*
+*.tgz

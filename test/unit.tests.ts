@@ -65,13 +65,13 @@ tap.test("contrastRatio() should return the exact values from webaim.org's contr
 });
 
 tap.test("desiredLuminance() should return luminances that are at least the correct contrast ratio, but not too much higher", (t: any) => {
-  Object.keys(WCAGcontrastRatios).forEach((std: WCAGStandard) => {
+  for (let std in WCAGcontrastRatios) {
     for (let i = 1; i < 1000; i+=10) {
       const lum = 1/i;
-      const contrastingLum = desiredLuminance(lum, WCAGcontrastRatios[std]);
+      const contrastingLum = desiredLuminance(lum, WCAGcontrastRatios[std as WCAGStandard]);
       const cr = contrastRatio(lum, contrastingLum);
-      t.ok(cr >= (WCAGcontrastRatios[std] - (1 - .999999999999999)) && cr < WCAGcontrastRatios[std] + 1, `${cr} should be in [${WCAGcontrastRatios[std]}, ${WCAGcontrastRatios[std] + 1})`);
+      t.ok(cr >= (WCAGcontrastRatios[std as WCAGStandard] - (1 - .999999999999999)) && cr < WCAGcontrastRatios[std as WCAGStandard] + 1, `${cr} should be in [${WCAGcontrastRatios[std as WCAGStandard]}, ${WCAGcontrastRatios[std as WCAGStandard] + 1})`);
     }
-  })
+  }
   t.end();
 });
