@@ -1,4 +1,4 @@
-import { channelsToHex, hexChannels, linearizedRGB, relativeLuminance, contrastRatio, channelWeights, desiredLuminance, WCAGcontrastRatios } from "../src/index";
+import { channelsToHex, hexChannels, linearizedRGB, relativeLuminance, contrastRatio, channelWeights, desiredLuminance, WCAGcontrastRatios } from "../src/functions";
 import { HexChannel, WCAGStandard } from "../src/types";
 import * as tap from "tap";
 
