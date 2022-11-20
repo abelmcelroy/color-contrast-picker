@@ -124,7 +124,7 @@ $ npm install color-contrast-picker
 
 # Contribute
 
-If there is a new methods you would like to support, please make a pull request or reach out.
+If there is a new method you would like to support, please make a pull request or reach out.
 
 # License
 
