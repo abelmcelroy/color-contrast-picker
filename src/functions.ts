@@ -138,6 +138,15 @@ export const desiredLuminance = (lumA: number, desiredContrastRatio: number): nu
   }
 
 export const makeHexesContrast = (color: HexColorStr, fixedColor: HexColorStr, minContrastRatio: WCAGStandard | number = "AA_text") => {
+  if (typeof color !== "string" || !/#[0-9a-f]{6}$/i.test(color)) {
+    console.warn(`${color} is not a hexcode, please provide a hexcode`);
+    return null;
+  }
+  if (typeof fixedColor !== "string" || !/#[0-9a-f]{6}$/i.test(fixedColor)) {
+    console.warn(`${fixedColor} is not a hexcode, please provide a hexcode`);
+    return null;
+  }
+
   const desiredContrastRatio = typeof minContrastRatio === "number" ? minContrastRatio : WCAGcontrastRatios[minContrastRatio];
   const relativeLumA = relativeLuminance(fixedColor);
   const greatestContrastRatio = Math.max(contrastRatio(relativeLumA, 0), contrastRatio(relativeLumA, 1));
