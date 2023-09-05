@@ -8,7 +8,7 @@ This library provides a method for finding a color with a specific contrast rati
 
 ### `getContrastingHex(color, contrastRatio)`
 
-Returns a color of the same hue/saturation as the `color` and contrasts the original color with a contrast ratio of `contrastRatio`.
+For situations when you want a lighter/darker version of a color to precisely contrast the original. Returns a color of the same hue/saturation as the `color` and contrasts the original color with a contrast ratio of `contrastRatio`.
 
 ### Uses
 
@@ -33,7 +33,7 @@ Now, `textColor` equals ![#C3D0F9](https://placehold.co/15x15/C3D0F9/C3D0F9.png)
 #### `contrastRatio`
 - definition: the minimum contrast ratio between your `color` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
 - type: number | string
-- default value: 'AA' (equivilent to 3)
+- default value: 'AA' (equivalent to 3)
 - examples: 3, 'AA', 'AA_text', 'AA_text_large', 'AAA_text', 'AAA_text_large';
 
 ### Example
@@ -41,14 +41,14 @@ Now, `textColor` equals ![#C3D0F9](https://placehold.co/15x15/C3D0F9/C3D0F9.png)
 ```js
 const { getContrastingHex } = require('color-contrast-picker');
 
-const hex1 = makeHexesContrast('#7524B7', 4.5);
-const hex2 = makeHexesContrast('#7524B7', 'AA_text');
+const hex1 = getContrastingHex('#7524B7', 4.5);
+const hex2 = getContrastingHex('#7524B7', 'AA_text');
 
 // hex1 = hex2 = '#D9BBF2' (contrast ratio = 4.58)
 // the next lighter shade is '#DFBFF3' (contrast ratio = 4.79)
 // the next darker shade is '#DAB6F1' (contrast ratio = 4.44)
 
-const hex3 = makeHexesContrast('#6D6D6D', 7);
+const hex3 = getContrastingHex('#6D6D6D', 7);
 
 // hex3 = null
 // #000000 (black) has a contrast ratio of 4.05
@@ -59,11 +59,11 @@ const hex3 = makeHexesContrast('#6D6D6D', 7);
 ---
 ### `makeHexesContrast(color, fixedColor, contrastRatio)`
 
-Returns a color of the same hue/saturation as the `color` that has a contrasts the `fixedColor` by with a contrast ratio of `contrastRatio`.
+For situations when you want a two colors to have a specific contrast ratio. Returns a color of the same hue/saturation as the `color` that has a contrasts the `fixedColor`, with a contrast ratio of `contrastRatio`.
 
 ### Uses
 
-Potential applications include procredurally generating colors for charts.
+Potential applications include procedurally generating colors for charts.
 
 More specifically, say you had two different colors, and you would like to adjust one of them so that their contrast ratio reaches a certain value. This is the function you'd want to use.
 
@@ -75,7 +75,7 @@ If I wanted to shift ![#8F428D](https://placehold.co/15x15/8F428D/8F428D.png) `#
 const newPurple = makeHexesContrast('#8F428D', '50B47B', 3);
 ```
 
-Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png) `#7A3878`, which has a contrast ratio of 3.09 with ![#50B47B](https://placehold.co/15x15/50B47B/50B47B.png) `#50B47B`.
+Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png) `#7A3878`, which has a contrast ratio of 3.09 with ![#50B47B](https://placehold.co/15x15/50B47B/50B47B.png) `#50B47B` (the minimum possible contrast ratio equal to or above 3 that is possible with 8-bit colors... without changing the hue or saturation of the purple).
 
 ### Params
 
@@ -94,7 +94,7 @@ Now, `newPurple` equals ![#7A3878](https://placehold.co/15x15/7A3878/7A3878.png)
 #### `contrastRatio`
 - definition: the minimum contrast ratio between your `fixedColor` and the function's output color [see w3 glossary definition here](https://www.w3.org/TR/WCAG21/#glossary)
 - type: number | string
-- default value: 'AA' (equivilent to 3)
+- default value: 'AA' (equivalent to 3)
 - examples: 3, 'AA', 'AA_text', 'AA_text_large', 'AAA_text', 'AAA_text_large';
 
 ### Example
