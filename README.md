@@ -59,7 +59,7 @@ const hex3 = getContrastingHex('#6D6D6D', 7);
 ---
 ### `makeHexesContrast(color, fixedColor, contrastRatio)`
 
-For situations when you want a two colors to have a specific contrast ratio. Returns a color of the same hue/saturation as the `color` that has a contrasts the `fixedColor`, with a contrast ratio of `contrastRatio`.
+For situations when you want a two colors to have a specific contrast ratio. Returns a color of the same hue/saturation as the `color` that contrasts the `fixedColor`, with a contrast ratio of `contrastRatio`.
 
 ### Uses
 
